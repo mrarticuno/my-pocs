@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PWA Todo App</title>
+    <link rel="manifest" href="manifest.json" />
+    <meta name="theme-color" content="#2196F3" />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+      .todo-item {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+        border-bottom: 1px solid #eee;
+      }
+      #notification-permission {
+        margin: 20px 0;
+        padding: 10px;
+        background: #f0f0f0;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Todo PWA</h1>
+    <div id="notification-permission">
+      <button onclick="requestNotificationPermission()">
+        Enable Notifications
+      </button>
+    </div>
+    <div>
+      <input type="text" id="todo-input" placeholder="Add new todo" />
+      <button onclick="addTodo()">Add</button>
+    </div>
+    <div id="todo-list"></div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
